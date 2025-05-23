@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LOGGIN</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+	</head>
+	<body>
+
+		<h2>Skapa ett lösenord</h2>
+
+		<form id="form" onsubmit="return checkpsw()" method="POST" action="SPELSIDA MAIN.html" method="POST">
+			<label for="email">email</label>
+			<input type="email" id="email" name="email" required>
+			<label for="password">Lösenord</label>
+			<input type="password" id="password" name="password" required>
+			<p id="errormessage"></p>
+			<button type="submit">logga in</button>
+		</form>
+
+   
+
+		<script>
+			function checkpsw() {
+				var password = document.getElementById("password").value;
+   
+            
+				if (password.length < 6) {
+					document.getElementById("errormessage").innerHTML = "Lösenordet måsta var minst 6 tecken långt.";
+					return false; 
+				} else {
+					document.getElementById("errormessage").innerHTML = "";
+					return true; 
+				}
+			}
+		</script>
+
+	</body>
+</html>

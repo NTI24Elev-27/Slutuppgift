@@ -1,0 +1,33 @@
+#game { 
+	   width: 200px;
+	   height: 300px;
+	   }
+#header {
+		 position: sticky;
+         top: 0;
+		 font-family: "Audiowide", sans-serif;
+		 }
+		 
+
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
