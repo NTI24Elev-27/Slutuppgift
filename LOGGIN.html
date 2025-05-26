@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LOGGIN</title>
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+		<link rel="stylesheet" href="CSS/STYLE.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body class="w3-blue">
+		<div class="w3-red">
+			
+			<!--Header-->
+			<div id="header" class="w3-container w3-blue w3-top w3-padding-large w3-card">
+				<h1 id="header" class="w3-text-red" style="text-shadow:3px 3px 0 #444">SMOKE</h1>
+			</div>
+			
+			<h2>Logga in</h2>
+			
+			<form id="form" onsubmit="return checkpsw()" method="POST" action="SPELSIDA MAIN.html" method="POST">
+				<label for="text">username</label>
+				<input type="text" id="text" name="text" required>
+				<label for="password">password</label>
+				<input type="password" id="password" name="password" required>
+				<p id="errormessage"></p>
+				<button type="submit">logga in</button>
+			</form>
+		
+			<!--Footer-->
+			<div id="footer" class="w3-blue">
+				<p align="center" class="w3-padding-16">this website uses AI-images from DeepAI. All the games presented an this website are made up.
+				NOTE: This website is a schoolproject, DO NOT USE YOUR OWN INFORMATION!<br><a href="FAQ.html">FAQ</a><br>Contact: telephone: 694 20 911<br>Email:Holden.cox@gmail.com</p>
+			</div>
+		</div>
+		
+   
+
+		<script>
+			function checkpsw() {
+				var password = document.getElementById("password").value;
+   
+            
+				if (password.length < 6) {
+					document.getElementById("errormessage").innerHTML = "The password need atleast 6 letters";
+					return false; 
+				} else {
+					document.getElementById("errormessage").innerHTML = "";
+					return true; 
+				}
+			}
+		</script>
+
+	</body>
+</html>
